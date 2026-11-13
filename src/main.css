@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ocultar el título/header por defecto del realm ("Sepsa") */
+#kc-header, 
+#kc-header-wrapper, 
+.kc-logo-text {
+    display: none !important;
+}
