@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import LogoSepsa from "../components/LogoSepsa";
 
 type LoginProps = {
   kcContext: Extract<KcContext, { pageId: "login.ftl" }>;
@@ -58,14 +59,8 @@ export default function Login(props: LoginProps) {
       displayMessage={false} // los mensajes se pintan dentro de la card
     >
       <div className="min-h-screen flex flex-col items-center justify-center bg-app-gradient px-4">
-        {/* Logo — SEPSA */}
-        <div className="inline-flex items-center font-bold text-4xl text-chrome mb-6">
-          <span>SEPS</span>
-          <span className="relative">
-            A
-            <span className="absolute -top-1.5 -right-1 w-2.5 h-2.5 rounded-full bg-primary" />
-          </span>
-        </div>
+        {/* Logo — SEPSA (oficial) */}
+        <LogoSepsa className="h-12 text-chrome mb-6" />
 
         <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-8">
           <h1 className="text-lg font-semibold text-chrome text-center">Iniciar sesión</h1>
